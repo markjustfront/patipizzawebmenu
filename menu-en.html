@@ -1,83 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu - English</title>
+    <title>Menu - Pati Pizza</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap');
-        
-        * { margin:0; padding:0; box-sizing:border-box; }
-        
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             font-family: 'Roboto', sans-serif;
-            background: linear-gradient(135deg, #2c1a0f, #4a2f1f);
+            background: #8c2a1f;
             color: #f5e8d3;
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
         }
-        
+
         .container {
-            max-width: 480px;
-            padding: 40px 20px;
+            max-width: 520px;
+            padding: 40px 25px;
             text-align: center;
+            background: rgba(140, 42, 31, 0.95);
+            border: 12px solid #fff;
         }
-        
-        h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.8rem;
-            margin-bottom: 8px;
-        }
-        
+
         .back {
             position: absolute;
             top: 25px;
             left: 25px;
-            color: #f5e8d3;
+            color: #ffdd57;
             text-decoration: none;
-            font-size: 1.1rem;
+            font-size: 1.15rem;
         }
-        
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.2rem;
+            color: #ffdd57;
+        }
+
+        .tag {
+            font-size: 1.25rem;
+            margin-bottom: 45px;
+            opacity: 0.95;
+        }
+
         .menu-option {
-            background: rgba(245, 232, 211, 0.1);
-            border: 2px solid #f5e8d3;
-            padding: 35px 30px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 3px solid #ffdd57;
+            padding: 35px 20px;
             margin: 25px 0;
             border-radius: 12px;
-            font-size: 1.6rem;
-            font-weight: 500;
+            font-size: 1.7rem;
             cursor: pointer;
             transition: all 0.3s;
         }
-        
+
         .menu-option:hover {
-            background: #f5e8d3;
-            color: #2c1a0f;
+            background: #ffdd57;
+            color: #8c2a1f;
             transform: scale(1.03);
-        }
-        
-        .coming-soon {
-            opacity: 0.6;
-            font-size: 1.1rem;
         }
     </style>
 </head>
+
 <body>
     <a href="index.html" class="back">← Back</a>
-    
+
     <div class="container">
-        <h1>Our Menu</h1>
-        <p style="margin-bottom:40px; opacity:0.9;">Choose a category</p>
-        
+        <h1>Pati Pizza</h1>
+        <p class="tag">Peratallada • Terrace</p>
+
         <div class="menu-option" onclick="openPDF('food-en.pdf')">
-            🍽️ Food Menu
+            🍕 Food Menu
         </div>
-        
+
         <div class="menu-option" onclick="alert('Drinks menu coming soon!')">
-            🥂 Drinks Menu <span class="coming-soon">(coming soon)</span>
+            🥂 Drinks Menu
         </div>
+
+        <a href="https://www.google.com/maps/place/PATI+PIZZA/@41.9765614,1.9353535,291298m/data=!3m1!1e3!4m10!1m2!2m1!1spati+pizza!3m6!1s0x12baf986e482213d:0xafc2bbfefd449068!8m2!3d41.9765614!4d3.088918!15sCgpwYXRpIHBpenphWgwiCnBhdGkgcGl6emGSARBwaXp6YV9yZXN0YXVyYW504AEA!16s%2Fg%2F11k5zmklr9?entry=ttu&g_ep=EgoyMDI2MDUxMi4wIKXMDSoASAFQAw%3D%3D"
+            target="_blank" style="margin-top:40px; color:#ffdd57; text-decoration:none; font-size:1.1rem;">
+            📍 Google Maps
+        </a>
     </div>
 
     <script>
@@ -86,4 +99,5 @@
         }
     </script>
 </body>
+
 </html>
