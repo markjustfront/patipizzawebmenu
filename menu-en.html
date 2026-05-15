@@ -1,36 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu - Pati Pizza</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap');
-        
-        * { margin:0; padding:0; box-sizing:border-box; }
-        
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             font-family: 'Inter', sans-serif;
             min-height: 100vh;
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-                        url('background.png') center/cover no-repeat fixed;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url('background.png') center/cover no-repeat fixed;
             color: #f5f0e8;
             display: flex;
             align-items: center;
             justify-content: center;
         }
-        
+
         .container {
             max-width: 540px;
             padding: 60px 40px;
-            background: rgba(255,255,255,0.13);
+            background: rgba(245, 240, 232, 0.13);
             backdrop-filter: blur(14px);
             border-radius: 28px;
-            border: 1px solid rgba(255,255,255,0.25);
-            box-shadow: 0 25px 70px rgba(0,0,0,0.45);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            box-shadow: 0 25px 70px rgba(0, 0, 0, 0.45);
             text-align: center;
         }
-        
+
         .back {
             position: absolute;
             top: 35px;
@@ -40,21 +45,21 @@
             font-size: 1.2rem;
             font-weight: 500;
         }
-        
+
         h1 {
             font-family: 'Playfair Display', serif;
             font-size: 3.7rem;
             margin-bottom: 12px;
         }
-        
+
         .tag {
             font-size: 1.3rem;
             margin-bottom: 55px;
             opacity: 0.9;
         }
-        
+
         .menu-option {
-            background: #f5f0e8;
+            background: rgba(245, 240, 232, 0.95);
             color: #2c2118;
             border: none;
             padding: 38px 30px;
@@ -64,28 +69,29 @@
             font-weight: 500;
             cursor: pointer;
             transition: all 0.4s ease;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
         }
-        
+
         .menu-option:hover {
             transform: translateY(-8px);
-            box-shadow: 0 20px 45px rgba(0,0,0,0.3);
+            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.3);
         }
     </style>
 </head>
+
 <body>
     <a href="index.html" class="back">← Back</a>
-    
+
     <div class="container">
         <h1>Pati Pizza</h1>
         <p class="tag">Peratallada • Exclusive Terrace</p>
-        
+
         <div class="menu-option" onclick="openPDF('food-en.pdf')">
-            🍕 Food Menu
+            Food Menu
         </div>
-        
+
         <div class="menu-option" onclick="alert('Drinks menu coming soon!')">
-            🥂 Drinks Menu
+            Drinks Menu
         </div>
     </div>
 
@@ -95,4 +101,5 @@
         }
     </script>
 </body>
+
 </html>
