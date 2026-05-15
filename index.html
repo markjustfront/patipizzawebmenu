@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Menu</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #2c1a0f, #4a2f1f);
+            color: #f5e8d3;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        
+        .container {
+            max-width: 500px;
+            padding: 40px 20px;
+        }
+        
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.2rem;
+            margin-bottom: 10px;
+            color: #f5e8d3;
+        }
+        
+        .subtitle {
+            font-size: 1.1rem;
+            margin-bottom: 50px;
+            opacity: 0.9;
+        }
+        
+        .lang-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        
+        .lang-btn {
+            background: rgba(245, 232, 211, 0.1);
+            border: 2px solid #f5e8d3;
+            color: #f5e8d3;
+            padding: 25px 20px;
+            font-size: 1.3rem;
+            font-weight: 500;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+        
+        .lang-btn:hover {
+            background: #f5e8d3;
+            color: #2c1a0f;
+            transform: translateY(-5px);
+        }
+        
+        footer {
+            margin-top: 60px;
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>La Taverna</h1>
+        <p class="subtitle">Select your language</p>
+        
+        <div class="lang-grid">
+            <button class="lang-btn" onclick="goToLanguage('ca')">Català</button>
+            <button class="lang-btn" onclick="goToLanguage('es')">Castellano</button>
+            <button class="lang-btn" onclick="goToLanguage('en')">English</button>
+            <button class="lang-btn" onclick="goToLanguage('fr')">Français</button>
+        </div>
+        
+        <footer>
+            © 2026 La Taverna • All menus in PDF
+        </footer>
+    </div>
+
+    <script>
+        function goToLanguage(lang) {
+            window.location.href = `menu-${lang}.html`;
+        }
+    </script>
+</body>
+</html>
