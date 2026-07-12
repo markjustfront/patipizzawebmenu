@@ -120,8 +120,8 @@
 
     <script>
         function openPDF(filename) {
-            window.open(filename, '_blank');
-        }
+    window.location.href = `viewer.html?file=${encodeURIComponent(filename)}&back=menu-fr.html`;
+}
     </script>
 </body>
 </html>

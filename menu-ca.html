@@ -126,7 +126,7 @@
 
     <script>
         function openPDF(filename) {
-            window.open(filename, '_blank');
+            window.location.href = `viewer.html?file=${encodeURIComponent(filename)}&back=menu-ca.html`;
         }
     </script>
 </body>
