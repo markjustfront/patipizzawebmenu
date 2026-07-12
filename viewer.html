@@ -1,137 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pati Pizza</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap');
+<title>Pati Pizza</title>
 
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-        }
+<style>
 
-        body{
-            font-family:'Inter',sans-serif;
-            min-height:100vh;
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap');
 
-            background:
-                linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),
-                url("background-2.jpeg") center/cover fixed;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-            color:#f5f0e8;
+body{
+    font-family:'Inter',sans-serif;
 
-            display:flex;
-            flex-direction:column;
-            align-items:center;
+    min-height:100vh;
 
-            padding:25px 15px;
-        }
+    background:
+        linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),
+        url("background-2.jpeg") center/cover fixed;
 
-        .back{
-            align-self:flex-start;
-            color:#f5f0e8;
-            text-decoration:none;
-            font-size:1.15rem;
-            font-weight:500;
-            margin-bottom:15px;
-            transition:.25s;
-        }
+    color:#f5f0e8;
 
-        .back:hover{
-            opacity:.8;
-        }
+    display:flex;
+    flex-direction:column;
+    align-items:center;
 
-        .logo{
-            font-family:'Playfair Display',serif;
-            font-size:clamp(2.6rem,8vw,3.8rem);
-            margin-bottom:25px;
-            text-shadow:0 4px 20px rgba(0,0,0,.6);
-        }
+    padding:25px 15px;
+}
 
-        .container{
-            width:min(1100px,100%);
-            flex:1;
-            min-height:0;
+.back{
+    align-self:flex-start;
+    color:#f5f0e8;
+    text-decoration:none;
+    font-size:1.15rem;
+    font-weight:500;
+    margin-bottom:15px;
+}
 
-            background:rgba(245,240,232,.13);
-            backdrop-filter:blur(14px);
+.logo{
+    font-family:'Playfair Display',serif;
+    font-size:clamp(2.6rem,8vw,3.8rem);
+    margin-bottom:25px;
+    text-shadow:0 4px 20px rgba(0,0,0,.6);
+}
 
-            border-radius:28px;
-            border:1px solid rgba(255,255,255,.25);
+.container{
 
-            box-shadow:0 25px 70px rgba(0,0,0,.45);
+    width:min(1100px,100%);
 
-            padding:18px;
+    background:rgba(245,240,232,.13);
 
-            display:flex;
-        }
+    backdrop-filter:blur(14px);
 
-        iframe{
-            width:100%;
-            height:100%;
-            border:none;
-            border-radius:18px;
-            background:white;
-        }
+    border-radius:28px;
 
-        @media (max-width:768px){
+    border:1px solid rgba(255,255,255,.25);
 
-            body{
-                padding:12px;
-            }
+    box-shadow:0 25px 70px rgba(0,0,0,.45);
 
-            .logo{
-                font-size:2rem;
-                margin-bottom:15px;
-            }
+    padding:20px;
 
-            .container{
-                width:100%;
-                height:calc(100vh - 135px);
-                padding:8px;
-                border-radius:20px;
-            }
+}
 
-            iframe{
-                border-radius:14px;
-            }
+.menu-page{
 
-        }
+    width:100%;
 
-    </style>
+    display:block;
+
+    border-radius:18px;
+
+    margin-bottom:20px;
+
+    box-shadow:0 8px 30px rgba(0,0,0,.25);
+
+}
+
+@media(max-width:768px){
+
+    body{
+
+        padding:10px;
+
+    }
+
+    .logo{
+
+        font-size:2rem;
+
+        margin-bottom:15px;
+
+    }
+
+    .container{
+
+        padding:10px;
+
+        border-radius:20px;
+
+    }
+
+}
+
+</style>
+
 </head>
 
 <body>
 
-    <a id="backButton" class="back">← Back</a>
+<a id="backButton" class="back">← Back</a>
 
-    <h1 class="logo">PATI PIZZA</h1>
+<h1 class="logo">PATI PIZZA</h1>
 
-    <div class="container">
+<div class="container" id="gallery">
 
-        <iframe
-            id="pdfViewer"
-            allowfullscreen>
-        </iframe>
-
-    </div>
+</div>
 
 <script>
 
 const params = new URLSearchParams(window.location.search);
 
-const file = params.get("file");
+const menu = params.get("menu");
+
+const pages = Number(params.get("pages"));
 
 const back = params.get("back") || "index.html";
 
 document.getElementById("backButton").href = back;
 
-document.getElementById("pdfViewer").src =
-    file + "#toolbar=0&navpanes=0&scrollbar=0";
+// Detect language folder automatically
+const lang = menu.split("-")[1];
+
+const gallery = document.getElementById("gallery");
+
+for(let i=1;i<=pages;i++){
+
+    const img=document.createElement("img");
+
+    img.src=`${lang}/${menu}-${i}.webp`;
+
+    img.className="menu-page";
+
+    img.loading="lazy";
+
+    gallery.appendChild(img);
+
+}
 
 </script>
 
