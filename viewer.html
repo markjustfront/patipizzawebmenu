@@ -1,100 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Pati Pizza</title>
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap');
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
         }
 
-        body {
-            font-family: 'Inter', sans-serif;
-            min-height: 100vh;
+        body{
+            font-family:'Inter',sans-serif;
+            min-height:100vh;
 
             background:
-                linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)),
+                linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),
                 url("background-2.jpeg") center/cover fixed;
 
-            color: #f5f0e8;
+            color:#f5f0e8;
 
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            display:flex;
+            flex-direction:column;
+            align-items:center;
 
-            padding: 25px 15px;
+            padding:25px 15px;
         }
 
-        .back {
-
-            align-self: flex-start;
-
-            color: #f5f0e8;
-
-            text-decoration: none;
-
-            font-size: 1.15rem;
-
-            font-weight: 500;
-
-            margin-bottom: 15px;
-
+        .back{
+            align-self:flex-start;
+            color:#f5f0e8;
+            text-decoration:none;
+            font-size:1.15rem;
+            font-weight:500;
+            margin-bottom:15px;
+            transition:.25s;
         }
 
-        .logo {
-
-            font-family: 'Playfair Display', serif;
-
-            font-size: clamp(2.6rem, 8vw, 3.8rem);
-
-            margin-bottom: 25px;
-
-            text-shadow: 0 4px 20px rgba(0, 0, 0, .6);
-
+        .back:hover{
+            opacity:.8;
         }
 
-        .container {
-            width: min(1200px, 100%);
-            height: 78vh;
-
-            padding: 18px;
-            /* Add spacing */
-
-            background: rgba(245, 240, 232, .13);
-            backdrop-filter: blur(14px);
-            border-radius: 28px;
-            border: 1px solid rgba(255, 255, 255, .25);
-            box-shadow: 0 25px 70px rgba(0, 0, 0, .45);
+        .logo{
+            font-family:'Playfair Display',serif;
+            font-size:clamp(2.6rem,8vw,3.8rem);
+            margin-bottom:25px;
+            text-shadow:0 4px 20px rgba(0,0,0,.6);
         }
 
-        iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-            border-radius: 18px;
-            /* Rounded PDF corners */
-            background: white;
+        .container{
+            width:min(1100px,100%);
+            flex:1;
+            min-height:0;
+
+            background:rgba(245,240,232,.13);
+            backdrop-filter:blur(14px);
+
+            border-radius:28px;
+            border:1px solid rgba(255,255,255,.25);
+
+            box-shadow:0 25px 70px rgba(0,0,0,.45);
+
+            padding:18px;
+
+            display:flex;
         }
 
-        @media(max-width:768px) {
+        iframe{
+            width:100%;
+            height:100%;
+            border:none;
+            border-radius:18px;
+            background:white;
+        }
 
-            .container {
+        @media (max-width:768px){
 
-                height: 82vh;
+            body{
+                padding:12px;
+            }
 
+            .logo{
+                font-size:2rem;
+                margin-bottom:15px;
+            }
+
+            .container{
+                width:100%;
+                height:calc(100vh - 135px);
+                padding:8px;
+                border-radius:20px;
+            }
+
+            iframe{
+                border-radius:14px;
             }
 
         }
-    </style>
 
+    </style>
 </head>
 
 <body>
@@ -105,29 +113,27 @@
 
     <div class="container">
 
-        <iframe id="pdfViewer"></iframe>
+        <iframe
+            id="pdfViewer"
+            allowfullscreen>
+        </iframe>
 
     </div>
 
-    <script>
+<script>
 
-        const params = new URLSearchParams(window.location.search);
+const params = new URLSearchParams(window.location.search);
 
-        const file = params.get("file");
+const file = params.get("file");
 
-        const back = params.get("back") || "index.html";
+const back = params.get("back") || "index.html";
 
-        document.getElementById("backButton").href = back;
+document.getElementById("backButton").href = back;
 
-        const isMobile = window.innerWidth <= 768;
+document.getElementById("pdfViewer").src =
+    file + "#toolbar=0&navpanes=0&scrollbar=0";
 
-        document.getElementById("pdfViewer").src =
-            isMobile
-                ? file + "#toolbar=0&navpanes=0&view=FitH"
-                : file + "#toolbar=0&navpanes=0&zoom=page-fit";
-
-    </script>
+</script>
 
 </body>
-
 </html>
