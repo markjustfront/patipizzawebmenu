@@ -107,29 +107,29 @@
         <h1>PATI PIZZA</h1>
         <p class="tag">Peratallada • Pizza al Foc de Llenya</p>
 
-        <div class="menu-option" onclick="openPDF('es/food-es.pdf')">
+        <div class="menu-option" onclick="openMenu('food-es',2)">
             Menu
         </div>
 
-        <div class="menu-option" onclick="openPDF('es/drinks-es.pdf')">
+        <div class="menu-option" onclick="openMenu('drinks-es',2)">
             Bebidas
         </div>
 
-        <div class="menu-option" onclick="openPDF('es/deserts-es.pdf')">
-            Postres y Cocteles
+        <div class="menu-option" onclick="openMenu('desserts-es',1)">
+            Postres y Còcteles
         </div>
-    </div>
+        <div class="copyright">
+            © 2026 Pati Pizza • markjustfront
+        </div>
 
-    <div class="copyright">
-        © 2026 Pati Pizza • markjustfront
-    </div>
+        <script>
+            function openMenu(menu, pages) {
 
-    <script>
-        function openPDF(filename) {
-            window.location.href =
-                `viewer.html?file=${encodeURIComponent(filename)}&back=menu-es.html`;
-        }
-    </script>
+                window.location.href =
+                    `viewer.html?menu=${menu}&pages=${pages}&back=menu-es.html`;
+
+            }
+        </script>
 </body>
 
 </html>
