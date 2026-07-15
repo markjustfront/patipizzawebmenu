@@ -1,0 +1,25 @@
+{
+    "burrata-pizza": {
+        "name": "Burrata Pizza",
+        "category": "pizza",
+        "description": "Tomato, mozzarella, burrata, basil pesto and parmesan."
+    },
+
+    "diavola": {
+        "name": "Diavola",
+        "category": "pizza",
+        "description": "Tomato, mozzarella and spicy salami."
+    },
+
+    "tiramisu": {
+        "name": "Tiramisú",
+        "category": "dessert",
+        "description": "Traditional Italian dessert."
+    },
+
+    "house-wine": {
+        "name": "House Wine",
+        "category": "drink",
+        "description": "Selection of local wines."
+    }
+}

@@ -1,0 +1,27 @@
+[
+    {
+        "photo": "reviews/review01.webp",
+        "rating": 5,
+        "author": "Emily",
+        "date": "July 2026",
+        "review": "Excellent pizzas and friendly service. We will definitely come back.",
+        "items": [
+            "burrata-pizza",
+            "tiramisu"
+        ],
+        "googleReview": "https://google.com"
+    },
+
+    {
+        "photo": "reviews/review02.webp",
+        "rating": 5,
+        "author": "Marc",
+        "date": "June 2026",
+        "review": "Amazing atmosphere and fantastic food.",
+        "items": [
+            "diavola",
+            "house-wine"
+        ],
+        "googleReview": "https://google.com"
+    }
+]
