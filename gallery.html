@@ -1,394 +1,428 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Pati Pizza Reviews</title>
+    <title>Pati Pizza Reviews</title>
 
-<style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+        body {
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
 
-body{
-    font-family:'Inter',sans-serif;
-    min-height:100vh;
+            background:
+                linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)),
+                url("background-1.jpeg") center/cover fixed;
 
-    background:
-    linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),
-    url("background-1.jpeg") center/cover fixed;
+            color: #f5f0e8;
 
-    color:#f5f0e8;
+            padding: 25px;
+        }
 
-    padding:25px;
-}
+        .back {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
 
-.back{
-    color:white;
-    text-decoration:none;
-    font-size:1.1rem;
-}
+        .logo {
+            text-align: center;
+            margin: 20px 0;
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+        }
 
-.logo{
-    text-align:center;
-    margin:20px 0;
-    font-family:'Playfair Display',serif;
-    font-size:3rem;
-}
+        .header {
 
-.header{
+            max-width: 1200px;
+            margin: auto;
 
-    max-width:1200px;
-    margin:auto;
+            background: rgba(255, 255, 255, .1);
 
-    background:rgba(255,255,255,.1);
+            backdrop-filter: blur(14px);
 
-    backdrop-filter:blur(14px);
+            border-radius: 24px;
 
-    border-radius:24px;
+            padding: 25px;
 
-    padding:25px;
+            text-align: center;
 
-    text-align:center;
+            margin-bottom: 25px;
 
-    margin-bottom:25px;
+        }
 
-}
+        .rating {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
 
-.rating{
-    font-size:2rem;
-    margin-bottom:10px;
-}
+        .google-btn {
 
-.google-btn{
+            display: inline-block;
 
-    display:inline-block;
+            margin-top: 15px;
 
-    margin-top:15px;
+            background: white;
 
-    background:white;
+            color: #222;
 
-    color:#222;
+            text-decoration: none;
 
-    text-decoration:none;
+            padding: 12px 20px;
 
-    padding:12px 20px;
+            border-radius: 50px;
 
-    border-radius:50px;
+        }
 
-}
+        .filters {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+        }
 
-.filters{
-    display:flex;
-    gap:10px;
-    flex-wrap:wrap;
-    justify-content:center;
-    margin-top:20px;
-}
+        .filter {
+            padding: 10px 18px;
+            border-radius: 50px;
+            background: white;
+            color: black;
+            cursor: pointer;
+        }
 
-.filter{
-    padding:10px 18px;
-    border-radius:50px;
-    background:white;
-    color:black;
-    cursor:pointer;
-}
+        .gallery {
+            max-width: 1200px;
+            margin: auto;
 
-.gallery{
-    max-width:1200px;
-    margin:auto;
+            display: grid;
 
-    display:grid;
+            grid-template-columns:
+                repeat(auto-fill, minmax(250px, 1fr));
 
-    grid-template-columns:
-    repeat(auto-fill,minmax(250px,1fr));
+            gap: 20px;
+        }
 
-    gap:20px;
-}
+        .card {
 
-.card{
+            overflow: hidden;
 
-    overflow:hidden;
+            border-radius: 20px;
 
-    border-radius:20px;
+            cursor: pointer;
 
-    cursor:pointer;
+            background: white;
 
-    background:white;
+        }
 
-}
+        .card img {
 
-.card img{
+            width: 100%;
+            display: block;
 
-    width:100%;
-    display:block;
+        }
 
-}
+        .modal {
 
-.modal{
+            position: fixed;
+            inset: 0;
 
-    position:fixed;
-    inset:0;
+            background: rgba(0, 0, 0, .85);
 
-    background:rgba(0,0,0,.85);
+            display: none;
 
-    display:none;
+            justify-content: center;
+            align-items: center;
 
-    justify-content:center;
-    align-items:center;
+            padding: 20px;
 
-    padding:20px;
+        }
 
-}
+        .modal-content {
 
-.modal-content{
+            max-width: 900px;
+            width: 100%;
 
-    max-width:900px;
-    width:100%;
+            background: white;
 
-    background:white;
+            color: black;
 
-    color:black;
+            border-radius: 24px;
 
-    border-radius:24px;
+            overflow: hidden;
 
-    overflow:hidden;
+        }
 
-}
+        .modal img {
 
-.modal img{
+            width: 100%;
+            display: block;
 
-    width:100%;
-    display:block;
+        }
 
-}
+        .modal-body {
+            padding: 25px;
+        }
 
-.modal-body{
-    padding:25px;
-}
+        .items {
 
-.items{
+            margin-top: 15px;
 
-    margin-top:15px;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
 
-    display:flex;
-    gap:10px;
-    flex-wrap:wrap;
-}
+        .item {
 
-.item{
+            background: #f3f3f3;
 
-    background:#f3f3f3;
+            padding: 8px 12px;
 
-    padding:8px 12px;
+            border-radius: 50px;
 
-    border-radius:50px;
+            cursor: pointer;
 
-    cursor:pointer;
+        }
 
-}
+        .close {
 
-.close{
+            float: right;
 
-    float:right;
+            cursor: pointer;
 
-    cursor:pointer;
+            font-size: 2rem;
 
-    font-size:2rem;
-
-}
-
-</style>
+        }
+    </style>
 </head>
 
 <body>
 
-<a href="index.html" class="back">← Back</a>
+    <a href="index.html" class="back">← Back</a>
 
-<h1 class="logo">PATI PIZZA</h1>
+    <h1 class="logo">PATI PIZZA</h1>
 
-<div class="header">
+    <div class="header">
 
-<div class="rating" id="rating"></div>
+        <div class="rating" id="rating"></div>
 
-<div id="reviewCount"></div>
+        <div id="reviewCount"></div>
 
-<a id="googleLink"
-class="google-btn"
-target="https://www.google.com/maps/place/PATI+PIZZA/@41.975357,3.0889395,1138m/data=!3m1!1e3!4m18!1m9!3m8!1s0x12baf986e482213d:0xafc2bbfefd449068!2sPATI+PIZZA!8m2!3d41.9765614!4d3.088918!9m1!1b1!16s%2Fg%2F11k5zmklr9!3m7!1s0x12baf986e482213d:0xafc2bbfefd449068!8m2!3d41.9765614!4d3.088918!9m1!1b1!16s%2Fg%2F11k5zmklr9?entry=ttu&g_ep=EgoyMDI2MDYyMS4wIKXMDSoASAFQAw%3D%3D">
-View on Google Reviews
-</a>
+        <a id="googleLink" class="google-btn"
+            target="https://www.google.com/maps/place/PATI+PIZZA/@41.975357,3.0889395,1138m/data=!3m1!1e3!4m18!1m9!3m8!1s0x12baf986e482213d:0xafc2bbfefd449068!2sPATI+PIZZA!8m2!3d41.9765614!4d3.088918!9m1!1b1!16s%2Fg%2F11k5zmklr9!3m7!1s0x12baf986e482213d:0xafc2bbfefd449068!8m2!3d41.9765614!4d3.088918!9m1!1b1!16s%2Fg%2F11k5zmklr9?entry=ttu&g_ep=EgoyMDI2MDYyMS4wIKXMDSoASAFQAw%3D%3D">
+            View on Google Reviews
+        </a>
 
-<div class="filters">
-<div class="filter" data-filter="all">All</div>
-<div class="filter" data-filter="pizza">🍕 Pizza</div>
-<div class="filter" data-filter="salad">🥗 Salads</div>
-<div class="filter" data-filter="dessert">🍰 Desserts</div>
-<div class="filter" data-filter="drink">🍹 Drinks</div>
-</div>
+        <div class="filters">
+            <div class="filter" data-filter="all">All</div>
+            <div class="filter" data-filter="pizza">🍕 Pizza</div>
+            <div class="filter" data-filter="salad">🥗 Salads</div>
+            <div class="filter" data-filter="dessert">🍰 Desserts</div>
+            <div class="filter" data-filter="drink">🍹 Drinks</div>
+        </div>
 
-</div>
+    </div>
 
-<div class="gallery" id="gallery"></div>
+    <div class="gallery" id="gallery"></div>
 
-<div class="modal" id="modal">
-<div class="modal-content">
+    <div class="modal" id="modal">
+        <div class="modal-content">
 
-<div class="modal-body">
+            <div class="modal-body">
 
-<span class="close" onclick="closeModal()">×</span>
+                <span class="close" onclick="closeModal()">×</span>
 
-<img id="modalImage">
+                <img id="modalImage">
 
-<h2 id="modalStars"></h2>
+                <h2 id="modalStars"></h2>
 
-<p id="modalReview"></p>
+                <p id="modalReview"></p>
 
-<br>
+                <br>
 
-<strong id="modalAuthor"></strong>
+                <strong id="modalAuthor"></strong>
 
-<p id="modalDate"></p>
+                <p id="modalDate"></p>
 
-<div class="items" id="modalItems"></div>
+                <div class="items" id="modalItems"></div>
 
-<br>
+                <br>
 
-<a id="modalGoogle"
-target="_blank">
-View original review
-</a>
+                <a id="modalGoogle" target="_blank">
+                    View original review
+                </a>
 
-</div>
+            </div>
 
-</div>
-</div>
+        </div>
+    </div>
 
-<script>
+    <script>
 
-let menuData={};
-let reviews=[];
+        let menuData = {};
+        let reviews = [];
 
-async function init(){
+        async function init() {
 
-const stats=
-await fetch("stats.json").then(r=>r.json());
+            const stats =
+                await fetch("stats.json").then(r => r.json());
 
-menuData=
-await fetch("menu.json").then(r=>r.json());
+            menuData =
+                await fetch("menu.json").then(r => r.json());
 
-reviews=
-await fetch("reviews.json").then(r=>r.json());
+            reviews =
+                await fetch("reviews.json").then(r => r.json());
 
-document.getElementById("rating")
-.innerHTML=`⭐ ${stats.rating}`;
+            document.getElementById("rating")
+                .innerHTML = `⭐ ${stats.rating}`;
 
-document.getElementById("reviewCount")
-.innerHTML=`Based on ${stats.reviews} Google Reviews`;
+            document.getElementById("reviewCount")
+                .innerHTML = `Based on ${stats.reviews} Google Reviews`;
 
-document.getElementById("googleLink")
-.href=stats.google;
+            document.getElementById("googleLink")
+                .href = stats.google;
 
-renderReviews(reviews);
+            renderReviews(reviews);
 
-}
+        }
 
-function renderReviews(data){
+        function renderReviews(data) {
 
-const gallery=
-document.getElementById("gallery");
+            const gallery =
+                document.getElementById("gallery");
 
-gallery.innerHTML="";
+            gallery.innerHTML = "";
 
-data.forEach(review=>{
+            data.forEach(review => {
 
-const card=
-document.createElement("div");
+                const card =
+                    document.createElement("div");
 
-card.className="card";
+                card.className = "card";
 
-card.innerHTML=
-`<img src="${review.photo}">`;
+                card.innerHTML =
+                    `<img src="${review.photo}">`;
 
-card.onclick=()=>openReview(review);
+                card.onclick = () => openReview(review);
 
-gallery.appendChild(card);
+                gallery.appendChild(card);
 
-});
+            });
 
-}
+        }
 
-function openReview(review){
+        function openReview(review) {
 
-document.getElementById("modal").style.display="flex";
+            document.getElementById("modal").style.display = "flex";
 
-document.getElementById("modalImage").src=
-review.photo;
+            document.getElementById("modalImage").src =
+                review.photo;
 
-document.getElementById("modalStars")
-.textContent=
-"⭐".repeat(review.rating);
+            document.getElementById("modalStars")
+                .textContent =
+                "⭐".repeat(review.rating);
 
-document.getElementById("modalReview")
-.textContent=
-review.review;
+            document.getElementById("modalReview")
+                .textContent =
+                review.review;
 
-document.getElementById("modalAuthor")
-.textContent=
-review.author;
+            document.getElementById("modalAuthor")
+                .textContent =
+                review.author;
 
-document.getElementById("modalDate")
-.textContent=
-review.date;
+            document.getElementById("modalDate")
+                .textContent =
+                review.date;
 
-document.getElementById("modalGoogle")
-.href=
-review.googleReview;
+            document.getElementById("modalGoogle")
+                .href =
+                review.googleReview;
 
-const items=
-document.getElementById("modalItems");
+            const items =
+                document.getElementById("modalItems");
 
-items.innerHTML="";
+            items.innerHTML = "";
 
-review.items.forEach(id=>{
+            review.items.forEach(id => {
 
-const item=
-document.createElement("div");
+                const item =
+                    document.createElement("div");
 
-item.className="item";
+                item.className = "item";
 
-item.textContent=
-menuData[id].name;
+                item.textContent =
+                    menuData[id].name;
 
-item.onclick=()=>{
+                item.onclick = () => {
 
-alert(
-menuData[id].description
-);
+                    alert(
+                        menuData[id].description
+                    );
 
-};
+                };
 
-items.appendChild(item);
+                items.appendChild(item);
 
-});
+            });
 
-}
+        }
 
-function closeModal(){
+        function closeModal() {
 
-document.getElementById("modal").style.display="none";
+            document.getElementById("modal").onclick = function (e) {
 
-}
+                if (e.target === this) {
 
-init();
+                    closeModal();
 
-</script>
+                }
+
+            }
+
+            document.getElementById("modal").style.display = "none";
+
+        }
+
+        document.querySelectorAll(".filter").forEach(button => {
+
+            button.onclick = () => {
+
+                const category = button.dataset.filter;
+
+                if (category === "all") {
+                    renderReviews(reviews);
+                    return;
+                }
+
+                const filtered = reviews.filter(review =>
+
+                    review.items.some(item =>
+
+                        menuData[item].category === category
+
+                    )
+
+                );
+
+                renderReviews(filtered);
+
+            };
+
+        });
+
+        init();
+    </script>
 
 </body>
+
 </html>
