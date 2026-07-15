@@ -1,25 +1,169 @@
 {
-    "burrata-pizza": {
-        "name": "Burrata Pizza",
+    "patates-braves": {
+        "name": "Les nostres braves",
+        "category": "entrant",
+        "price": 7.5,
+        "description": "Patates naturals cruixents amb salsa brava casolana."
+    },
+
+    "provolone-tomaquet-sec": {
+        "name": "Provolone Napolità",
+        "category": "entrant",
+        "price": 10,
+        "description": "Amb tomàquet sec, orenga i olivada."
+    },
+
+    "provolone-xistorra": {
+        "name": "Provolone Napolità",
+        "category": "entrant",
+        "price": 12,
+        "description": "Amb xistorra i orenga."
+    },
+
+    "croquetes-pollastre": {
+        "name": "Croquetes de Pollastre",
+        "category": "entrant",
+        "price": 9.5,
+        "description": "Pollastre amb chutney de ceba i niu de patata."
+    },
+
+    "croquetes-calama": {
+        "name": "Croquetes de Calamaró",
+        "category": "entrant",
+        "price": 11,
+        "description": "Calamaró en la seva tinta amb maionesa cítrica."
+    },
+
+    "croquetes-gorgonzola": {
+        "name": "Croquetes de Gorgonzola",
+        "category": "entrant",
+        "price": 10,
+        "description": "Gorgonzola i nous sobre llit de carbassó i tomàquet sec."
+    },
+
+    "croquetes-alberginia": {
+        "name": "Croquetes d'Albergínia",
+        "category": "entrant",
+        "price": 9.5,
+        "description": "Albergínia i formatge de cabra amb melmelada de tomàquet."
+    },
+
+    "coca-oli": {
+        "name": "Coca de Forn de Llenya amb Oli d'Oliva",
+        "category": "entrant",
+        "price": 14,
+        "description": "Amb anxoves de l'Escala i recuit de Fonteta."
+    },
+
+    "amanida-burrata": {
+        "name": "Amanida de Tomàquet amb Burrata",
+        "category": "amanida",
+        "price": 12.5,
+        "description": "Amb olives Kalamata i pesto de nous."
+    },
+
+    "carpaccio-vedella": {
+        "name": "Carpaccio de Vedella Can Raliu",
+        "category": "entrant",
+        "price": 15,
+        "description": "Amb parmesà, tàperes i alfàbrega fresca."
+    },
+
+    "margarida": {
+        "name": "Margarida",
         "category": "pizza",
-        "description": "Tomato, mozzarella, burrata, basil pesto and parmesan."
+        "price": 12,
+        "description": "Fior di latte, tomàquet de Puglia, oli d'oliva verge extra i làmines de Parmigiano Reggiano DOP de 24 mesos."
     },
 
-    "diavola": {
-        "name": "Diavola",
+    "canalla": {
+        "name": "Canalla",
         "category": "pizza",
-        "description": "Tomato, mozzarella and spicy salami."
+        "price": 12.5,
+        "description": "Fior di latte, tomàquet de Puglia i pernil cuit."
     },
 
-    "tiramisu": {
-        "name": "Tiramisú",
-        "category": "dessert",
-        "description": "Traditional Italian dessert."
+    "pagesa": {
+        "name": "Pagesa",
+        "category": "pizza",
+        "price": 14.5,
+        "description": "Fior di latte, tomàquet de Puglia, botifarra de Can Raliu i xampinyons."
     },
 
-    "house-wine": {
-        "name": "House Wine",
-        "category": "drink",
-        "description": "Selection of local wines."
+    "cabrona": {
+        "name": "Cabrona",
+        "category": "pizza",
+        "price": 15,
+        "description": "Fior di latte, pesto de nous, formatge de cabra i botifarra de Can Raliu."
+    },
+
+    "dolça": {
+        "name": "Dolça",
+        "category": "pizza",
+        "price": 15.5,
+        "description": "Fior di latte, gorgonzola DOP, pera, mel i nous."
+    },
+
+    "mortadelo": {
+        "name": "Mortadelo",
+        "category": "pizza",
+        "price": 15,
+        "description": "Pesto de nous, stracciatella, mortadel·la i pols de festuc."
+    },
+
+    "melosa": {
+        "name": "Melosa",
+        "category": "pizza",
+        "price": 18.5,
+        "description": "Fior di latte, melós de vedella de Can Raliu i romaní."
+    },
+
+    "silvestre": {
+        "name": "Silvestre",
+        "category": "pizza",
+        "price": 14.5,
+        "description": "Tomàquet de Puglia, albergínia fregida, flors silvestres i oli de tòfona."
+    },
+
+    "carbonara": {
+        "name": "Carbonara",
+        "category": "pizza",
+        "price": 16,
+        "description": "Fior di latte, pecorino romà, rovell d'ou, guanciale i pebre negre."
+    },
+
+    "brava": {
+        "name": "Brava",
+        "category": "pizza",
+        "price": 13.5,
+        "description": "Tomàquet de Puglia, Pomodorino del Piennolo del Vesuvio DOP, anxoves de l'Escala, tàrtar d'olives i all confitat."
+    },
+
+    "xistosa": {
+        "name": "Xistosa",
+        "category": "pizza",
+        "price": 14,
+        "description": "Fior di latte, xistorra de Can Raliu, pebrot habanero i oli picant."
+    },
+
+    "fumada": {
+        "name": "Fumada",
+        "category": "pizza",
+        "price": 15.5,
+        "description": "Fior di latte, provola fumada, salmó fumat, melmelada de gerds i herbes Emporarom."
+    },
+
+    "quatre-formatges-fiesta": {
+        "name": "Quatre Formatges Fiesta",
+        "category": "pizza",
+        "price": 14.5,
+        "description": "Fior di latte, gorgonzola DOP, encenalls de Parmigiano Reggiano DOP de 24 mesos i formatge de cabra."
+    },
+
+    "burrada": {
+        "name": "Burrada",
+        "category": "pizza",
+        "price": 15.5,
+        "description": "Tomàquet cherry groc del Vesuvi (Pomodorino Giallo del Vesuvio), pesto de nous i burrata."
     }
 }

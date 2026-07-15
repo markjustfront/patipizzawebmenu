@@ -1,27 +1,146 @@
 [
     {
+        "photo": "reviews/patates-braves.webp",
+        "rating": 5,
+        "review": "",
+        "items": ["patates-braves"]
+    },
+    {
+        "photo": "reviews/provolone-tomaquet-sec.webp",
+        "rating": 5,
+        "review": "",
+        "items": ["provolone-tomaquet-sec"]
+    },
+    {
+        "photo": "reviews/provolone-xistorra.webp",
+        "rating": 5,
+        "review": "",
+        "items": ["provolone-xistorra"]
+    },
+    {
+        "photo": "reviews/croquetes-pollastre.webp",
+        "rating": 5,
+        "review": "",
+        "items": ["croquetes-pollastre"]
+    },
+    {
+        "photo": "reviews/croquetes-calama.webp",
+        "rating": 5,
+        "review": "",
+        "items": ["croquetes-calama"]
+    },
+    {
+        "photo": "reviews/croquetes-gorgonzola.webp",
+        "rating": 5,
+        "review": "",
+        "items": ["croquetes-gorgonzola"]
+    },
+    {
+        "photo": "reviews/croquetes-alberginia.webp",
+        "rating": 5,
+        "review": "",
+        "items": ["croquetes-alberginia"]
+    },
+    {
+        "photo": "reviews/coca-oli.webp",
+        "rating": 5,
+        "review": "",
+        "items": ["coca-oli"]
+    },
+    {
+        "photo": "reviews/amanida-burrata.webp",
+        "rating": 5,
+        "review": "",
+        "items": ["amanida-burrata"]
+    },
+    {
+        "photo": "reviews/carpaccio-vedella.webp",
+        "rating": 5,
+        "review": "",
+        "items": ["carpaccio-vedella"]
+    },
+    {
+        "photo": "reviews/margarida.webp",
+        "rating": 5,
+        "review": "",
+        "items": ["margarida"]
+    },
+    {
+        "photo": "reviews/canalla.webp",
+        "rating": 5,
+        "review": "",
+        "items": ["canalla"]
+    },
+    {
         "photo": "reviews/pagesa.webp",
         "rating": 5,
-        "author": "Emily",
-        "date": "July 2026",
-        "review": "Excellent pizzas and friendly service. We will definitely come back.",
-        "items": [
-            "burrata-pizza",
-            "tiramisu"
-        ],
-        "googleReview": "https://google.com"
+        "review": "",
+        "items": ["pagesa"]
     },
-
+    {
+        "photo": "reviews/cabrona.webp",
+        "rating": 5,
+        "review": "",
+        "items": ["cabrona"]
+    },
     {
         "photo": "reviews/dolca.webp",
         "rating": 5,
-        "author": "Marc",
-        "date": "June 2026",
-        "review": "Amazing atmosphere and fantastic food.",
-        "items": [
-            "diavola",
-            "house-wine"
-        ],
-        "googleReview": "https://google.com"
+        "review": "",
+        "items": ["dolça"]
+    },
+    {
+        "photo": "reviews/mortadelo.webp",
+        "rating": 5,
+        "review": "",
+        "items": ["mortadelo"]
+    },
+    {
+        "photo": "reviews/melosa.webp",
+        "rating": 5,
+        "review": "",
+        "items": ["melosa"]
+    },
+    {
+        "photo": "reviews/silvestre.webp",
+        "rating": 5,
+        "review": "",
+        "items": ["silvestre"]
+    },
+    {
+        "photo": "reviews/carbonara.webp",
+        "rating": 5,
+        "review": "",
+        "items": ["carbonara"]
+    },
+    {
+        "photo": "reviews/brava.webp",
+        "rating": 5,
+        "review": "",
+        "items": ["brava"]
+    },
+    {
+        "photo": "reviews/xistosa.webp",
+        "rating": 5,
+        "review": "",
+        "items": ["xistosa"]
+    },
+    {
+        "photo": "reviews/fumada.webp",
+        "rating": 5,
+        "review": "",
+        "items": ["fumada"]
+    },
+    {
+        "photo": "reviews/quatre-formatges-fiesta.webp",
+        "rating": 5,
+        "review": "",
+        "items": ["quatre-formatges-fiesta"]
+    },
+    {
+        "photo": "reviews/burrada.webp",
+        "rating": 5,
+        "review": "",
+        "items": ["burrada"]
     }
 ]
