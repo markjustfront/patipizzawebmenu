@@ -1,6 +1,6 @@
 [
     {
-        "photo": "reviews/review01.webp",
+        "photo": "reviews/pagesa.webp",
         "rating": 5,
         "author": "Emily",
         "date": "July 2026",
@@ -13,7 +13,7 @@
     },
 
     {
-        "photo": "reviews/review02.webp",
+        "photo": "reviews/dolca.webp",
         "rating": 5,
         "author": "Marc",
         "date": "June 2026",
